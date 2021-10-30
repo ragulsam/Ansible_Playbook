@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: checking CPU memory and status
+    command: vmstat
+    register: out
+    ignore_errors: yes
+  - name: output
+    debug: var=out.stdout_lines
