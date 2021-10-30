@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   tasks:
-  - name: checking CPU memory and status
+  - name:  CPU memory and status
     command: vmstat
     register: out
     ignore_errors: yes
